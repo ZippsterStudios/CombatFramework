@@ -1,0 +1,1 @@
+﻿# Pet Patrol\nwhen has_target & visible & in_range(AttackRange): stop; cast(primary)\ndefault: move(chase, MoveSpeed)\n

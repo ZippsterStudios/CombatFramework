@@ -1,0 +1,24 @@
+{
+  "name": "Framework.DOT",
+  "rootNamespace": "Framework.DOT",
+  "references": [
+    "Framework.Core",
+    "Framework.Damage",
+    "Framework.Resources",
+    "Framework.TimedEffect",
+    "Framework.Temporal",
+    "Unity.Entities",
+    "Unity.Collections",
+    "Unity.Mathematics",
+    "Unity.Burst"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

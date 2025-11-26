@@ -1,0 +1,31 @@
+{
+  "name": "Framework.Spells",
+  "rootNamespace": "Framework.Spells",
+  "references": [
+    "Framework.Core",
+    "Framework.Cooldowns",
+    "Framework.Resources",
+    "Framework.Temporal",
+    "Framework.Buffs",
+    "Framework.DOT",
+    "Framework.Debuffs",
+    "Framework.HOT",
+    "Framework.Heal",
+    "Framework.Damage",
+    "Framework.AreaEffects",
+    "Framework.Stats",
+    "Unity.Entities",
+    "Unity.Collections",
+    "Unity.Mathematics",
+    "Unity.Burst"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

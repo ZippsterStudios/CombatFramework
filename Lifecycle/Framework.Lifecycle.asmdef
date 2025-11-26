@@ -1,0 +1,34 @@
+{
+    "name":  "Framework.Lifecycle",
+    "rootNamespace":  "Framework.Lifecycle",
+    "references":  [
+                       "Framework.Core",
+                       "Framework.Resources",
+                       "Unity.Entities",
+                       "Unity.Collections",
+                       "Unity.Mathematics",
+                       "Unity.Burst"
+                   ],
+    "optionalUnityReferences":  [
+
+                                ],
+    "includePlatforms":  [
+
+                         ],
+    "excludePlatforms":  [
+
+                         ],
+    "allowUnsafeCode":  false,
+    "overrideReferences":  false,
+    "precompiledReferences":  [
+
+                              ],
+    "autoReferenced":  true,
+    "defineConstraints":  [
+
+                          ],
+    "versionDefines":  [
+
+                       ],
+    "noEngineReferences":  false
+}

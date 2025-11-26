@@ -1,0 +1,70 @@
+using System;
+using Unity.Collections;
+using Unity.Entities;
+
+namespace Framework.Spells.Content
+{
+    [Flags]
+    public enum SpellDefinitionFlags : ushort
+    {
+        None = 0,
+        Channeled = 1 << 0,
+        AllowPartialRefund = 1 << 1,
+        IgnoreSilence = 1 << 2,
+        IgnoreInterrupts = 1 << 3
+    }
+
+    public struct SpellDefinitionBlob
+    {
+        public FixedString64Bytes Id;
+        public FixedString32Bytes CategoryId;
+        public int CategoryLevel;
+        public int SpellLevel;
+        public SpellRank Rank;
+        public SpellDefinitionFlags Flags;
+        public float CastTime;
+        public float Cooldown;
+        public float InterruptChargePercentOverride;
+        public float FizzleChargePercentOverride;
+        public BlobArray<SpellCost> Costs;
+        public BlobArray<SpellEffect> Effects;
+    }
+
+    public static class SpellDefinitionBlobUtility
+    {
+        public static BlobAssetReference<SpellDefinitionBlob> Create(in SpellDefinition def, Allocator allocator = Allocator.Persistent)
+        {
+            var builder = new BlobBuilder(Allocator.Temp);
+            ref var root = ref builder.ConstructRoot<SpellDefinitionBlob>();
+            root.Id = def.Id;
+            root.CategoryId = def.CategoryId;
+            root.CategoryLevel = def.CategoryLevel;
+            root.SpellLevel = def.SpellLevel;
+            root.Rank = def.Rank;
+            root.CastTime = def.CastTime;
+            root.Cooldown = def.Cooldown;
+            root.Flags = def.Flags;
+            root.InterruptChargePercentOverride = def.InterruptChargePercentOverride;
+            root.FizzleChargePercentOverride = def.FizzleChargePercentOverride;
+
+            var costArray = builder.Allocate(ref root.Costs, def.Costs?.Length ?? 0);
+            if (def.Costs != null)
+            {
+                for (int i = 0; i < def.Costs.Length; i++)
+                    costArray[i] = def.Costs[i];
+            }
+
+            var effectArray = builder.Allocate(ref root.Effects, def.Effects?.Length ?? 0);
+            if (def.Effects != null)
+            {
+                for (int i = 0; i < def.Effects.Length; i++)
+                    effectArray[i] = def.Effects[i];
+            }
+
+            var blob = builder.CreateBlobAssetReference<SpellDefinitionBlob>(allocator);
+            builder.Dispose();
+            return blob;
+        }
+    }
+}
+

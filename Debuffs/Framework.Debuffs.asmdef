@@ -1,0 +1,22 @@
+{
+  "name": "Framework.Debuffs",
+  "rootNamespace": "Framework.Debuffs",
+  "references": [
+    "Framework.Core",
+    "Framework.Stats",
+    "Unity.Entities",
+    "Unity.Collections",
+    "Unity.Burst",
+    "Unity.Mathematics",
+    "Framework.TimedEffect"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

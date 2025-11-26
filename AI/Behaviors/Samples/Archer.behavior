@@ -1,0 +1,5 @@
+# Archer
+when has_target & visible & in_range(AttackRange): stop; cast(primary)
+when has_target & visible & not in_range(AttackRange): move(chase, MoveSpeed)
+when health_below(FleeHealthThresholdPercent): move(flee, FleeMoveSpeed, FleeRetreatDistance)
+default: stop

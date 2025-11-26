@@ -1,0 +1,7 @@
+Spells Component Reference
+
+- Known spells buffer: Framework/Spells/Spellbook/Components/SpellSlot.cs
+- Runtime casting component: Framework/Spells/Drivers/SpellDriver.Casting (IComponentData nested in driver)
+- Execution router: Framework/Spells/Features/FeatureRegistry.cs
+- Notes: No standalone ECS component lives under Spells/Components; components are defined under Spellbook and Drivers.
+

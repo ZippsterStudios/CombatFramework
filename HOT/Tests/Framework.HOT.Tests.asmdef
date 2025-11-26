@@ -1,0 +1,26 @@
+{
+  "name": "Framework.HOT.Tests",
+  "rootNamespace": "",
+  "references": [
+    "Framework.HOT",
+    "Framework.Core",
+    "Framework.Temporal",
+    "Framework.Resources",
+    "Unity.Entities",
+    "Unity.Collections",
+    "Unity.Mathematics",
+    "Unity.Burst"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "noEngineReferences": false
+}

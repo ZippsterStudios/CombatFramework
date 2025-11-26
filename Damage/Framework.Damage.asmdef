@@ -1,0 +1,23 @@
+{
+  "name": "Framework.Damage",
+  "rootNamespace": "Framework.Damage",
+  "references": [
+    "Framework.Core",
+    "Framework.Resources",
+    "Framework.Buffs",
+    "Framework.Temporal",
+    "Unity.Entities",
+    "Unity.Collections",
+    "Unity.Mathematics",
+    "Unity.Burst"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

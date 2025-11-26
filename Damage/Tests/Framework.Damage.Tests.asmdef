@@ -1,0 +1,29 @@
+{
+  "name": "Framework.Damage.Tests",
+  "rootNamespace": "Framework.Damage.Tests",
+  "references": [
+    "Framework.Damage",
+    "Framework.Core",
+    "Framework.Resources",
+    "Framework.Buffs",
+    "Framework.Temporal",
+    "Unity.Entities",
+    "Unity.Collections",
+    "Unity.Mathematics",
+    "Unity.Burst"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "noEngineReferences": false
+}

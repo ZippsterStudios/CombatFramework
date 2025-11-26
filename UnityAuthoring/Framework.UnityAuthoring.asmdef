@@ -1,0 +1,42 @@
+{
+  "name": "Framework.UnityAuthoring",
+  "rootNamespace": "Framework.UnityAuthoring",
+  "references": [
+    "Framework.Core",
+    "Framework.Resources",
+    "Framework.Damage",
+    "Framework.Pets",
+    "Framework.Spells",
+    "Framework.Spells.Tests",
+    "Framework.Temporal",
+    "Framework.Heal",
+    "Framework.Debuffs",
+    "Framework.Buffs",
+    "Framework.TimedEffect",
+    "Framework.DOT",
+    "Framework.HOT",
+    "Framework.AI",
+    "Framework.Contracts",
+    "Unity.Entities",
+    "Unity.Collections",
+    "Unity.Mathematics",
+    "Unity.Burst"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [
+    {
+      "name": "com.unity.entities",
+      "expression": "1.0.0",
+      "define": "USE_ENTITIES_1_0_OR_NEWER"
+    }
+  ],
+  "noEngineReferences": false
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Framework.Temporal.Tests",
+  "rootNamespace": "",
+  "references": [
+    "Framework.Temporal",
+    "Framework.Core",
+    "Framework.Resources",
+    "Framework.HOT",
+    "Unity.Entities",
+    "Unity.Collections",
+    "Unity.Mathematics",
+    "Unity.Burst"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "noEngineReferences": false
+}

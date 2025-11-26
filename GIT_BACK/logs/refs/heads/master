@@ -1,0 +1,25 @@
+0000000000000000000000000000000000000000 bc74493e74b92498ab3b18457b6fd5cbbb3c1555 Zippster <zippster@zippsterstudios.com> 1760579252 -0500	commit (initial): here goes!
+bc74493e74b92498ab3b18457b6fd5cbbb3c1555 9e7290270d3b9411cb043415efb444b69f80b442 Zippster <zippster@zippsterstudios.com> 1760581214 -0500	commit: another round!
+9e7290270d3b9411cb043415efb444b69f80b442 798506feb9f3b65c22c29d46cf1f59300f69317a Zippster <zippster@zippsterstudios.com> 1760679551 -0500	commit: Updates are coming nicely
+798506feb9f3b65c22c29d46cf1f59300f69317a a1c442b64d7d1f65cebafbbcf38efa64de958e1e Zippster <zippster@zippsterstudios.com> 1760685087 -0500	commit: slowly getting somewhere
+a1c442b64d7d1f65cebafbbcf38efa64de958e1e da1a6dd4f80284d2c7cd5e2c0192b93bbd3ad03d Zippster <zippster@zippsterstudios.com> 1761097360 -0500	commit: commiting a good unity build
+da1a6dd4f80284d2c7cd5e2c0192b93bbd3ad03d d0765fce513118e84c5c30bb92aa0b65f60d3e2d Zippster <zippster@zippsterstudios.com> 1761104749 -0500	commit: Debuffs added
+d0765fce513118e84c5c30bb92aa0b65f60d3e2d f37453d81237ae3bcdd08f9d908412624e509020 Zippster <zippster@zippsterstudios.com> 1761107912 -0500	commit: less warning errors
+f37453d81237ae3bcdd08f9d908412624e509020 91cc57b70aefcbc23200d8fa058f130fa2762326 Zippster <zippster@zippsterstudios.com> 1761109955 -0500	commit: 0 warnings 0 errors...
+91cc57b70aefcbc23200d8fa058f130fa2762326 48e03d9b3ee0716d8f33e2cbdfee1cd23ff2db56 Zippster <zippster@zippsterstudios.com> 1761191030 -0500	commit: no longer broke
+48e03d9b3ee0716d8f33e2cbdfee1cd23ff2db56 747d51f452a24f89f4af7a231a8bceeb7e989902 Zippster <zippster@zippsterstudios.com> 1761194879 -0500	commit: about to add buffs
+747d51f452a24f89f4af7a231a8bceeb7e989902 d749e4b74ff1b2d11dce4764d83fce026e0064b4 Zippster <zippster@zippsterstudios.com> 1761196975 -0500	commit: Updating buff framework
+d749e4b74ff1b2d11dce4764d83fce026e0064b4 43383ed82a05be4b6f0efc1c3158011bfb3df55b Zippster <zippster@zippsterstudios.com> 1761197243 -0500	commit: builds with buff update (buff category/level
+43383ed82a05be4b6f0efc1c3158011bfb3df55b 0bab8d7da72a9c8c18fd513b4fa70c8dbfedbb26 Zippster <zippster@zippsterstudios.com> 1761224837 -0500	commit: Starting to introduce new logic for a single class being introduced, TimedEffectInstance, to get rid of duplicate logic
+0bab8d7da72a9c8c18fd513b4fa70c8dbfedbb26 bbe09cb49897058a8fa42c391c8b02a7ffcae825 Zippster <zippster@zippsterstudios.com> 1761268311 -0500	commit: Builds
+bbe09cb49897058a8fa42c391c8b02a7ffcae825 8cfea21174df41621c5b526cf2b522259ae4738e Zippster <zippster@zippsterstudios.com> 1761269896 -0500	commit: functioning!
+8cfea21174df41621c5b526cf2b522259ae4738e 0e88f51b1f98d2f12bb9cbdf70621c62568ee4f9 Zippster <zippster@zippsterstudios.com> 1761274668 -0500	commit: No more errors!
+0e88f51b1f98d2f12bb9cbdf70621c62568ee4f9 ba0fb39cc29f2d8c63472b0a3c526bf89779e250 Zippster <zippster@zippsterstudios.com> 1761276288 -0500	commit: Updated so DOT and HOT actually use time system
+ba0fb39cc29f2d8c63472b0a3c526bf89779e250 bf7819efc9b012c337a879438c0bbc357a80519d Zippster <zippster@zippsterstudios.com> 1761279089 -0500	commit: Ok we are coming back!!!
+bf7819efc9b012c337a879438c0bbc357a80519d 73f874b507c9d0e2284adccd21bef59e81c147e9 Zippster <zippster@zippsterstudios.com> 1761326242 -0500	commit: Code updated and builds with temporal concept
+73f874b507c9d0e2284adccd21bef59e81c147e9 0c5978d3ca8a03b1f23082ecd0d6c2bd060c792c Zippster <zippster@zippsterstudios.com> 1761336014 -0500	commit: Yay! all working!
+0c5978d3ca8a03b1f23082ecd0d6c2bd060c792c 8211fb31e27abe2d713d41bf6032f31869f6fe5a Zippster <zippster@zippsterstudios.com> 1761348138 -0500	commit: Errors fixed
+8211fb31e27abe2d713d41bf6032f31869f6fe5a 9b6cb049658b7fa598e7c5d580738bac007a5ca7 Zippster <zippster@zippsterstudios.com> 1761352222 -0500	commit: Cleaned up spell stages!
+9b6cb049658b7fa598e7c5d580738bac007a5ca7 b8cfe67877accd4265db7ffccadf17408badbd37 Zippster <zippster@zippsterstudios.com> 1761354905 -0500	commit: No errors!
+b8cfe67877accd4265db7ffccadf17408badbd37 e57472ecb5043a30c28e74ff110b35572f51fba1 Zippster <zippster@zippsterstudios.com> 1761369986 -0500	commit: AI added and improved
+e57472ecb5043a30c28e74ff110b35572f51fba1 a2e50481905021403a5c073c9fc1943b3817bd1d Zippster <zippster@zippsterstudios.com> 1761371271 -0500	commit: Builds

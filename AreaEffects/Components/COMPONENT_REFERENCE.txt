@@ -1,0 +1,7 @@
+AreaEffects Component Reference
+
+- Runtime component: AreaEffectFactory.AreaEffectInstance (IComponentData)
+- Location: Framework/AreaEffects/Factory/AreaEffectFactory.cs
+- Requests: Framework/AreaEffects/Requests/AreaEffectRequest.cs
+- Notes: Spatial queries via Spatial/Utilities/Overlap.cs
+

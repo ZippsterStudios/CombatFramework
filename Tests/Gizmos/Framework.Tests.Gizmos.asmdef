@@ -1,0 +1,24 @@
+{
+  "name": "Framework.Tests.Gizmos",
+  "rootNamespace": "Framework.Tests.Gizmos",
+  "references": [
+    "Unity.Entities",
+    "Unity.Collections",
+    "Unity.Mathematics",
+    "Unity.Burst",
+    "Framework.Core",
+    "Framework.Resources",
+    "Framework.Pets"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

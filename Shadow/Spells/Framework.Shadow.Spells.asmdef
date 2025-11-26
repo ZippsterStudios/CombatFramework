@@ -1,0 +1,21 @@
+{
+  "name": "Framework.Shadow.Spells",
+  "rootNamespace": "Framework.Shadow.Spells",
+  "references": [
+    "Framework.Shadow",
+    "Framework.Spells",
+    "Unity.Entities",
+    "Unity.Collections",
+    "Unity.Mathematics",
+    "Unity.Burst"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

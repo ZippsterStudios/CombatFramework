@@ -1,0 +1,32 @@
+{
+  "name": "Framework.Melee",
+  "rootNamespace": "Framework.Melee",
+  "references": [
+    "Framework.Core",
+    "Framework.Resources",
+    "Framework.Temporal",
+    "Framework.Cooldowns",
+    "Framework.Buffs",
+    "Framework.DOT",
+    "Framework.HOT",
+    "Framework.Damage",
+    "Framework.AreaEffects",
+    "Framework.Stats",
+    "Framework.Spells",
+    "Framework.TimedEffect",
+    "Unity.Entities",
+    "Unity.Collections",
+    "Unity.Mathematics",
+    "Unity.Burst",
+    "Unity.Transforms"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

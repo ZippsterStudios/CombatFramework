@@ -1,0 +1,3 @@
+# Cowardly Slime
+when has_target & visible: move(flee, FleeMoveSpeed, FleeRetreatDistance)
+default: stop

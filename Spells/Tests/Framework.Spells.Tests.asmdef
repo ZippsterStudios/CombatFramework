@@ -1,0 +1,35 @@
+{
+  "name": "Framework.Spells.Tests",
+  "rootNamespace": "Framework.Spells.Tests",
+  "references": [
+    "Framework.Spells",
+    "Framework.Core",
+    "Framework.Resources",
+    "Framework.Cooldowns",
+    "Framework.Temporal",
+    "Framework.Damage",
+    "Framework.Buffs",
+    "Framework.Debuffs",
+    "Framework.DOT",
+    "Framework.HOT",
+    "Framework.Heal",
+    "Unity.Entities",
+    "Unity.Collections",
+    "Unity.Mathematics",
+    "Unity.Burst"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "noEngineReferences": false
+}

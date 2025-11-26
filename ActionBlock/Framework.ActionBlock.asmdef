@@ -1,0 +1,32 @@
+{
+    "name":  "Framework.ActionBlock",
+    "rootNamespace":  "Framework.ActionBlock",
+    "references":  [
+                       "Framework.Core",
+                       "Unity.Entities",
+                       "Unity.Burst",
+                       "Unity.Collections"
+                   ],
+    "optionalUnityReferences":  [
+
+                                ],
+    "includePlatforms":  [
+
+                         ],
+    "excludePlatforms":  [
+
+                         ],
+    "allowUnsafeCode":  false,
+    "overrideReferences":  false,
+    "precompiledReferences":  [
+
+                              ],
+    "autoReferenced":  true,
+    "defineConstraints":  [
+
+                          ],
+    "versionDefines":  [
+
+                       ],
+    "noEngineReferences":  false
+}

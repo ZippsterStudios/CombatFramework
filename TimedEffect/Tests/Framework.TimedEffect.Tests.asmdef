@@ -1,0 +1,21 @@
+{
+  "name": "Framework.TimedEffect.Tests",
+  "rootNamespace": "Framework.TimedEffect.Tests",
+  "references": [
+    "nunit.framework",
+    "Framework.TimedEffect",
+    "Unity.Entities",
+    "Unity.Collections"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

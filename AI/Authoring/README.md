@@ -1,0 +1,1 @@
+Authoring stubs for AI.

@@ -1,0 +1,22 @@
+{
+  "name": "Framework.DamageModifiers",
+  "rootNamespace": "Framework.DamageModifiers",
+  "references": [
+    "Framework.Core",
+    "Framework.Damage",
+    "Framework.Heal",
+    "Unity.Entities",
+    "Unity.Collections",
+    "Unity.Mathematics",
+    "Unity.Burst"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

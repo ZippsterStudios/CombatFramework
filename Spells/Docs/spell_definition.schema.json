@@ -1,0 +1,201 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SpellDefinition",
+  "type": "object",
+  "required": ["id", "school", "blocks"],
+  "properties": {
+    "id": { "type": "string" },
+    "categoryId": { "type": "string" },
+    "categoryLevel": { "type": "integer", "minimum": 0 },
+    "spellLevel": { "type": "integer", "minimum": 0 },
+    "rank": { "type": "string", "enum": ["Unspecified","Apprentice","Journeyman","Adept","Expert","Master","Grandmaster"] },
+    "school": { "type": "string", "enum": ["Arcane","Fire","Frost","Nature","Holy","Shadow","Physical"] },
+    "castTime": { "type": "number", "minimum": 0 },
+    "cooldown": { "type": "number", "minimum": 0 },
+    "range": { "type": "number", "minimum": 0 },
+    "targeting": { "type": "array", "items": { "type": "string", "enum": ["Self","Ally","Enemy","Ground"] } },
+    "costs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["resource", "amount"],
+        "properties": {
+          "resource": { "type": "string" },
+          "amount": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "blocks": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/effectBlock" }
+    }
+  },
+  "definitions": {
+    "effectBlock": {
+      "type": "object",
+      "required": ["scope", "payload"],
+      "properties": {
+        "scope": { "$ref": "#/definitions/targetScope" },
+        "payload": { "$ref": "#/definitions/payload" },
+        "conditions": { "$ref": "#/definitions/conditions" },
+        "timing": { "$ref": "#/definitions/timing" },
+        "scaling": { "$ref": "#/definitions/scaling" }
+      }
+    },
+    "targetScope": {
+      "type": "object",
+      "required": ["kind"],
+      "properties": {
+        "kind": { "type": "string", "enum": ["Caster","PrimaryTarget","AlliesInGroupOfCaster","AlliesInRaidOfCaster","Radius","ChainJump"] },
+        "center": { "type": "string", "enum": ["Caster","PrimaryTarget","Point"], "default": "Caster" },
+        "shape": { "type": "string", "enum": ["Sphere","Cone"], "default": "Sphere" },
+        "teamFilter": { "type": "string", "enum": ["Any","Ally","Enemy"], "default": "Any" },
+        "radius": { "type": "number", "minimum": 0 },
+        "coneAngleDeg": { "type": "number", "minimum": 0, "maximum": 360 },
+        "maxTargets": { "type": "integer", "minimum": 0 },
+        "customPoint": { "type": "array", "items": { "type": "number" }, "minItems": 3, "maxItems": 3 },
+        "includeCasterIfNoPrimary": { "type": "boolean", "default": false },
+        "chain": {
+          "type": "object",
+          "properties": {
+            "maxJumps": { "type": "integer", "minimum": 0 },
+            "jumpRadius": { "type": "number", "minimum": 0 },
+            "teamFilter": { "type": "string", "enum": ["Any","Ally","Enemy"] }
+          }
+        }
+      }
+    },
+    "payload": {
+      "type": "object",
+      "required": ["kind"],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": ["Damage","Heal","StatOps","ApplyBuff","ApplyDebuff","SpawnDot","SpawnHot","ScriptReference","SummonPet","SpawnAreaEffect"]
+        },
+        "damage": {
+          "type": "object",
+          "properties": {
+            "school": { "type": "string" },
+            "amount": { "type": "integer" },
+            "variancePercent": { "type": "number", "minimum": 0 },
+            "canCrit": { "type": "boolean" },
+            "tags": { "type": "string" }
+          }
+        },
+        "heal": {
+          "type": "object",
+          "properties": {
+            "amount": { "type": "integer" },
+            "variancePercent": { "type": "number", "minimum": 0 },
+            "canCrit": { "type": "boolean" }
+          }
+        },
+        "statOps": {
+          "type": "object",
+          "properties": {
+            "operations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["statId", "operation", "value"],
+                "properties": {
+                  "statId": { "type": "string" },
+                  "operation": { "type": "string", "enum": ["Add","Multiply","Set"] },
+                  "value": { "type": "number" },
+                  "durationMs": { "type": "integer", "minimum": 0 },
+                  "stackingKey": { "type": "string" },
+                  "stackingPolicy": { "type": "string", "enum": ["Refresh","StackDuration","IgnoreWhileActive"] }
+                }
+              }
+            }
+          }
+        },
+        "apply": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "string" },
+            "durationMs": { "type": "integer", "minimum": 0 },
+            "refreshDuration": { "type": "boolean" }
+          }
+        },
+        "overTime": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "string" },
+            "useCatalogDefaults": { "type": "boolean" },
+            "magnitudeOverride": { "type": "integer" },
+            "tickIntervalOverride": { "type": "number" },
+            "durationOverride": { "type": "number" }
+          }
+        },
+        "script": {
+          "type": "object",
+          "properties": {
+            "featureId": { "type": "string" },
+            "arguments": { "type": "string" }
+          }
+        },
+        "summon": {
+          "type": "object",
+          "properties": {
+            "petId": { "type": "string" },
+            "count": { "type": "integer", "minimum": 1 },
+            "spawnRadius": { "type": "number", "minimum": 0 }
+          }
+        },
+        "area": {
+          "type": "object",
+          "properties": {
+            "areaId": { "type": "string" },
+            "radius": { "type": "number", "minimum": 0 },
+            "duration": { "type": "number", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "conditions": {
+      "type": "object",
+      "properties": {
+        "chancePercent": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "requireLineOfSight": { "type": "boolean" },
+        "onCritOnly": { "type": "boolean" },
+        "targetHealthPercentLT": { "type": "number", "minimum": 0, "maximum": 1 },
+        "requiresTag": { "type": "string" },
+        "targetMustHaveTag": { "type": "string" },
+        "targetMustNotHaveTag": { "type": "string" }
+      }
+    },
+    "timing": {
+      "type": "object",
+      "properties": {
+        "delayMs": { "type": "number", "minimum": 0 },
+        "phaseTag": { "type": "string" },
+        "repeat": {
+          "type": "object",
+          "properties": {
+            "count": { "type": "integer", "minimum": 0 },
+            "periodMs": { "type": "number", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "scaling": {
+      "type": "object",
+      "properties": {
+        "attributeSource": { "type": "string", "enum": ["None","Attribute","Level","PreviousBlockResult"] },
+        "attributeId": { "type": "string" },
+        "attributeCoefficient": { "type": "number" },
+        "attributeFromCaster": { "type": "boolean" },
+        "levelCoefficient": { "type": "number" },
+        "usePreviousResult": { "type": "boolean" },
+        "previousBlockOffset": { "type": "integer", "minimum": -16, "maximum": 0 },
+        "resultSource": { "type": "string", "enum": ["Damage","Heal"] },
+        "resultCoefficient": { "type": "number" },
+        "clampMin": { "type": "number" },
+        "clampMax": { "type": "number" }
+      }
+    }
+  }
+}

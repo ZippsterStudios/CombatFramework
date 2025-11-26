@@ -1,0 +1,7 @@
+Heal Component Reference
+
+- Applies to: Framework/Resources/Components/Health (IComponentData)
+- Requests: Framework/Heal/Requests/HealRequest.cs
+- Runtime: Framework/Heal/Runtime/HealRuntimeSystem.cs consumes requests and calls HealDriver
+- Notes: Direct heals do not require a persistent Heal component.
+

@@ -1,0 +1,26 @@
+{
+  "name": "Framework.Core.Tests",
+  "rootNamespace": "",
+  "references": [
+    "Framework.Core",
+    "Framework.Buffs",
+    "Framework.Resources",
+    "Unity.Entities",
+    "Unity.Collections",
+    "Unity.Mathematics",
+    "Unity.Burst",
+    "Framework.TimedEffect"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "noEngineReferences": false
+}

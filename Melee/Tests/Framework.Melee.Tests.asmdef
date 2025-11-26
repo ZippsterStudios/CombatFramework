@@ -1,0 +1,37 @@
+{
+  "name": "Framework.Melee.Tests",
+  "rootNamespace": "Framework.Melee.Tests",
+  "references": [
+    "Framework.Melee",
+    "Framework.Core",
+    "Framework.Resources",
+    "Framework.Temporal",
+    "Framework.Cooldowns",
+    "Framework.Buffs",
+    "Framework.DOT",
+    "Framework.HOT",
+    "Framework.Damage",
+    "Framework.AreaEffects",
+    "Framework.Stats",
+    "Framework.TimedEffect",
+    "Unity.Entities",
+    "Unity.Collections",
+    "Unity.Mathematics",
+    "Unity.Burst",
+    "Unity.Transforms"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "noEngineReferences": false
+}

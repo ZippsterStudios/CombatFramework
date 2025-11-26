@@ -1,0 +1,203 @@
+{
+  "main": {
+    "id": "9ca58ea0b63edda6",
+    "type": "split",
+    "children": [
+      {
+        "id": "4b0da1c615487772",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e9917e7f6fce9939",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Subsystems/AI.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AI"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3bb6a52ca5d53db0",
+    "type": "split",
+    "children": [
+      {
+        "id": "4de30d30869d7f6a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "035fde3258297a87",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "15161340da6d5163",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "19f08fe80cd8790d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6eded1aa838848e4",
+    "type": "split",
+    "children": [
+      {
+        "id": "6c6b0384df526bd4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cfafb568358a29fc",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Spells/SpellAPI-QuickStart.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for SpellAPI-QuickStart"
+            }
+          },
+          {
+            "id": "cb1d6f1eb87b0ad8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Spells/SpellAPI-QuickStart.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from SpellAPI-QuickStart"
+            }
+          },
+          {
+            "id": "834f7384461967db",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "c116c92d4daf7252",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Spells/SpellAPI-QuickStart.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of SpellAPI-QuickStart"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "e9917e7f6fce9939",
+  "lastOpenFiles": [
+    "Subsystems/Damage.md",
+    "Subsystems/Cooldowns.md",
+    "Subsystems/HealOverTime.md",
+    "Subsystems/README.md",
+    "Subsystems/Stats.md",
+    "Subsystems/TimedEffect.md",
+    "Subsystems/Temporal.md",
+    "Subsystems/Damage.BypassFlags.md",
+    "Subsystems/Buffs.md",
+    "Subsystems/AI.md",
+    "Subsystems/AreaEffects.md",
+    "Subsystems/DamageOverTime.md",
+    "Subsystems/Lifecycle.md",
+    "Spells/Examples.md",
+    "Spells/README.md",
+    "Subsystems/Spells.md",
+    "Spells",
+    "Subsystems/Heal.md",
+    "README.md",
+    "Spells/SpellAPI-QuickStart.md",
+    "Subsystems/Resources.md",
+    "Subsystems",
+    "CoreSubsystems.md",
+    "Spells/Projectiles.md",
+    "Spells/CastingLifecycle.md",
+    "Spells/AuthoringGuidelines.md",
+    "SpellBuilder.md",
+    "Overview.md"
+  ]
+}

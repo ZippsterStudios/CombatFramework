@@ -1,0 +1,21 @@
+{
+  "name": "Framework.Buffs",
+  "rootNamespace": "Framework.Buffs",
+  "references": [
+    "Framework.Core",
+    "Unity.Entities",
+    "Unity.Collections",
+    "Unity.Mathematics",
+    "Unity.Burst",
+    "Framework.TimedEffect"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
