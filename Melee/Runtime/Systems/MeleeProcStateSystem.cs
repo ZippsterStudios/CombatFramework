@@ -11,15 +11,20 @@ namespace Framework.Melee.Runtime.Systems
     [UpdateAfter(typeof(MeleeDefenseWindowSystem))]
     public partial struct MeleeProcStateSystem : ISystem
     {
-        public void OnCreate(ref SystemState state) { }
+        private EntityQuery _procQuery;
+
+        public void OnCreate(ref SystemState state)
+        {
+            _procQuery = state.GetEntityQuery(ComponentType.ReadWrite<MeleeProcRuntimeStateElement>());
+        }
+
         public void OnDestroy(ref SystemState state) { }
 
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
             double now = SystemAPI.Time.ElapsedTime;
-            var query = state.GetEntityQuery(ComponentType.ReadWrite<MeleeProcRuntimeStateElement>());
-            using var entities = query.ToEntityArray(Allocator.Temp);
+            using var entities = _procQuery.ToEntityArray(Allocator.Temp);
             foreach (var entity in entities)
             {
                 var runtime = SystemAPI.GetBuffer<MeleeProcRuntimeStateElement>(entity);
@@ -41,7 +46,6 @@ namespace Framework.Melee.Runtime.Systems
                     runtime[i] = entry;
                 }
             }
-            query.Dispose();
         }
     }
 }
