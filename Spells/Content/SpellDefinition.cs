@@ -54,6 +54,7 @@ namespace Framework.Spells.Content
         public float Cooldown;
         public float Range;
         public SpellTargeting Targeting;
+        public SpellEffect[] Effects; // Legacy support; new data should populate Blocks.
         public EffectBlock[] Blocks;
         public SpellDefinitionFlags Flags;
         public float InterruptChargePercentOverride;

@@ -26,8 +26,9 @@ namespace Framework.Spells.Sustain
             var em = state.EntityManager;
             double now = SystemAPI.Time.ElapsedTime;
 
-            foreach (var (drains, entity) in SystemAPI.Query<DynamicBuffer<SustainedSpellDrain>>().WithEntityAccess())
+            foreach (var (drainsRef, entity) in SystemAPI.Query<DynamicBuffer<SustainedSpellDrain>>().WithEntityAccess())
             {
+                var drains = drainsRef;
                 for (int i = drains.Length - 1; i >= 0; i--)
                 {
                     var drain = drains[i];

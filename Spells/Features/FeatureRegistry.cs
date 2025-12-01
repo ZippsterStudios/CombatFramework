@@ -4,17 +4,10 @@ using Unity.Collections;
 using Unity.Mathematics;
 using Framework.Spells.Content;
 using Framework.AreaEffects.Spatial.Utilities;
+using RuntimeSpellMetadata = Framework.Spells.Runtime.SpellRuntimeMetadata;
 
 namespace Framework.Spells.Features
 {
-    public struct SpellRuntimeMetadata
-    {
-        public FixedString32Bytes CategoryId;
-        public int CategoryLevel;
-        public int SpellLevel;
-        public SpellRank Rank;
-    }
-
     [BurstCompile]
     public static class FeatureRegistry
     {
@@ -30,7 +23,7 @@ namespace Framework.Spells.Features
         private static readonly FixedString64Bytes FilterAlly = (FixedString64Bytes)"ally";
 
         [BurstCompile]
-        public static void Execute(ref EntityManager em, in Entity caster, in Entity target, in SpellRuntimeMetadata meta, in SpellEffect effect)
+        public static void Execute(ref EntityManager em, in Entity caster, in Entity target, in RuntimeSpellMetadata meta, in SpellEffect effect)
         {
             // AOE fan-out: if Radius > 0, query all matches and route per target
             if (effect.Radius > 0f)
@@ -60,7 +53,7 @@ namespace Framework.Spells.Features
         }
 
         [BurstCompile]
-        private static void RouteSingle(ref EntityManager em, in Entity caster, in Entity target, in SpellRuntimeMetadata meta, in SpellEffect effect)
+        private static void RouteSingle(ref EntityManager em, in Entity caster, in Entity target, in RuntimeSpellMetadata meta, in SpellEffect effect)
         {
             float rankMultiplier = GetRankMultiplier(meta.Rank);
             switch (effect.Kind)
@@ -164,7 +157,7 @@ namespace Framework.Spells.Features
             return TargetFilterKind.Any;
         }
 
-        private static int ResolveCategoryLevel(in SpellRuntimeMetadata meta)
+        private static int ResolveCategoryLevel(in RuntimeSpellMetadata meta)
         {
             if (meta.CategoryLevel > 0)
                 return meta.CategoryLevel;

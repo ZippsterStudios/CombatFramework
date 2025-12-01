@@ -1,6 +1,7 @@
 using Unity.Entities;
 using Unity.Collections;
 
+#pragma warning disable 0618 // IAspect is obsolete; kept for backward compatibility
 namespace Framework.Spells.Aspects
 {
     public readonly partial struct SpellbookAspect : IAspect
@@ -16,4 +17,4 @@ namespace Framework.Spells.Aspects
         }
     }
 }
-
+#pragma warning restore 0618

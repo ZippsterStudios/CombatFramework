@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using Unity.Entities;
+using RuntimeSpellMetadata = Framework.Spells.Runtime.SpellRuntimeMetadata;
 
 namespace Framework.CombatSystem.Tests
 {
@@ -12,7 +13,7 @@ namespace Framework.CombatSystem.Tests
             var em = world.EntityManager;
             var caster = em.CreateEntity();
             var target = em.CreateEntity();
-            var meta = new Framework.Spells.Features.SpellRuntimeMetadata
+            var meta = new RuntimeSpellMetadata
             {
                 CategoryId = default,
                 CategoryLevel = 0,

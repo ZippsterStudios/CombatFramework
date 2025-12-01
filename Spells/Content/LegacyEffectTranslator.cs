@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Framework.Damage.Components;
 using Unity.Collections;
@@ -11,9 +12,13 @@ namespace Framework.Spells.Content
     {
         public static EffectBlock[] Convert(in SpellDefinition def)
         {
-            var list = new List<EffectBlock>(def.Effects.Length);
-            for (int i = 0; i < def.Effects.Length; i++)
-                Append(list, def.Effects[i], in def);
+            var effects = def.Effects;
+            if (effects == null || effects.Length == 0)
+                return Array.Empty<EffectBlock>();
+
+            var list = new List<EffectBlock>(effects.Length);
+            for (int i = 0; i < effects.Length; i++)
+                Append(list, effects[i], in def);
             return list.ToArray();
         }
 

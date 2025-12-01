@@ -12,13 +12,14 @@ namespace Framework.Shadow.Runtime
 
         public static void BeginTargeting(ref EntityManager em, in Entity caster, in FixedString64Bytes spellId, float maxRange, in ShadowRules rules)
         {
-            ref var targeting = ref GetOrCreateTargeting(ref em);
+            var entity = GetOrCreateTargeting(ref em);
+            var targeting = em.GetComponentData<ShadowTargetingState>(entity);
             targeting.IsActive = 1;
             targeting.Caster = caster;
             targeting.SpellId = spellId.Length > 0 ? spellId : DefaultSpellId;
             targeting.MaxRange = maxRange;
             targeting.Rules = rules;
-            em.SetComponentData(GetTargetingEntity(ref em), targeting);
+            em.SetComponentData(entity, targeting);
         }
 
         public static void Cancel(ref EntityManager em)
@@ -76,7 +77,7 @@ namespace Framework.Shadow.Runtime
             return true;
         }
 
-        private static ref ShadowTargetingState GetOrCreateTargeting(ref EntityManager em)
+        private static Entity GetOrCreateTargeting(ref EntityManager em)
         {
             var entity = GetTargetingEntity(ref em);
             if (entity == Entity.Null)
@@ -88,7 +89,7 @@ namespace Framework.Shadow.Runtime
                 em.AddComponent<ShadowHoverState>(entity);
                 em.AddComponentData(entity, ShadowTargetingState.Inactive);
             }
-            return ref em.GetComponentDataRW<ShadowTargetingState>(entity).ValueRW;
+            return entity;
         }
 
         private static Entity GetTargetingEntity(ref EntityManager em)

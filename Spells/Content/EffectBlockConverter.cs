@@ -9,6 +9,9 @@ namespace Framework.Spells.Content
             if (def.Blocks != null && def.Blocks.Length > 0)
                 return def.Blocks;
 
+            if (def.Effects != null && def.Effects.Length > 0)
+                return LegacyEffectTranslator.Convert(in def);
+
             return Array.Empty<EffectBlock>();
         }
     }

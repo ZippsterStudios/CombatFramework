@@ -3,7 +3,7 @@
 Sync Framework source to a Unity project directory.
 
 Default dest:
-  C:\\ZippsterStudios\\Games\\Templates\\MMO Game Templates\\Assets\\Scripts\\Framework
+  D:\\ZippsterStudios\\Games\\Templates\\MMO Game Templates\\Assets\\Scripts\\Framework
 
 Usage examples:
   python tools/sync_framework.py                       # copy from ./Framework -> default dest
@@ -23,7 +23,7 @@ import os
 import shutil
 from pathlib import Path
 
-DEFAULT_DEST = r"C:\\ZippsterStudios\\Games\\Templates\\MMO Game Templates\\Assets\\Scripts\\Framework"
+DEFAULT_DEST = r"D:\\ZippsterStudios\\Games\\Templates\\MMO Game Templates\\Assets\\Scripts\\Framework"
 
 EXCLUDED_DIR_NAMES = {".git", "Library", "Temp", ".idea", ".vscode", "obj", "bin", ".vs", "UnityStubs", "Stubs"}
 EXCLUDED_FILE_NAMES = {"Thumbs.db", ".DS_Store"}
