@@ -10,6 +10,7 @@ Usage examples:
   python tools/sync_framework.py --dest "D:/Proj/Assets/Scripts/Framework"
   python tools/sync_framework.py --dry-run
   python tools/sync_framework.py --delete               # mirror (delete extraneous files at dest)
+  python tools/sync_framework.py --include-sandbox      # also sync ./Sandbox -> Assets/Scripts/Sandbox
 
 Notes:
   - Excludes any directory named ".git".
@@ -104,11 +105,14 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true", help="Print actions without copying")
     parser.add_argument("--delete", action="store_true", help="Delete files at dest not present in src")
     parser.add_argument("--only-code", action="store_true", help="Copy only code/data files (e.g., .cs, .json)")
+    parser.add_argument("--include-sandbox", action="store_true", help="Also sync ./Sandbox to Assets/Scripts/Sandbox")
     args = parser.parse_args()
 
     src = args.src.resolve()
     dest = args.dest
-    print(f"Syncing\n  src:  {src}\n  dest: {dest}\n  dry:  {args.dry_run}\n  del:  {args.delete}\n  only_code: {args.only_code}")
+    sandbox_src = src.parent / "Sandbox"
+    sandbox_dest = dest.parent / "Sandbox"
+    print(f"Syncing\n  src:  {src}\n  dest: {dest}\n  dry:  {args.dry_run}\n  del:  {args.delete}\n  only_code: {args.only_code}\n  sandbox: {args.include_sandbox}")
     if not src.exists() or not src.is_dir():
         print(f"ERROR: Source does not exist or is not a directory: {src}")
         return 2
@@ -116,6 +120,18 @@ def main() -> int:
         dest.mkdir(parents=True, exist_ok=True)
 
     copied, skipped, removed = sync_tree(src, dest, args.dry_run, args.delete, args.only_code)
+    if args.include_sandbox:
+        if not sandbox_src.exists() or not sandbox_src.is_dir():
+            print(f"WARNING: Sandbox source not found: {sandbox_src}")
+        else:
+            if not args.dry_run:
+                sandbox_dest.mkdir(parents=True, exist_ok=True)
+            c2, s2, r2 = sync_tree(sandbox_src, sandbox_dest, args.dry_run, args.delete, args.only_code)
+            copied += c2
+            skipped += s2
+            removed += r2
+            print(f"Sandbox synced to {sandbox_dest}")
+
     print(f"Done. Copied: {copied}, Skipped: {skipped}, Removed: {removed}")
     return 0
 
