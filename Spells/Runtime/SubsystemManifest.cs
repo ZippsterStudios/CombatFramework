@@ -22,6 +22,10 @@ namespace Framework.Spells.Runtime
             SystemRegistration.RegisterISystemInGroups<ApplySpellStageSystem>(world);
             SystemRegistration.RegisterISystemInGroups<CleanupSpellStageSystem>(world);
             SystemRegistration.RegisterISystemInGroups<SustainedSpellDrainSystem>(world);
+            SystemRegistration.RegisterISystemInGroups<TemporalImprint.Systems.TemporalImprintRecordingSystem>(world);
+            SystemRegistration.RegisterISystemInGroups<TemporalImprint.Systems.TemporalImprintReplaySystem>(world);
+            SystemRegistration.RegisterISystemInGroups<TemporalImprint.Systems.TemporalEchoDamageSystem>(world);
+            SystemRegistration.RegisterISystemInGroups<TemporalImprint.Systems.TemporalImprintSuppressionSystem>(world);
         }
     }
 }
